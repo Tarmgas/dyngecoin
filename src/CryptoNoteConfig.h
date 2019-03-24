@@ -2,7 +2,8 @@
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018-2019, The TurtleCoin Developers
 // Copyright (c) 2018-2019, The WrkzCoin developers
-// Copyright (c) 2018-2019, The WrkzCoin developers
+// Copyright (c) 2018-2019, The Coin developers
+// Copyright (c) 2018-2019, The DyngeCoin developers
 //
 // Please see the included LICENSE file for more information.
 
@@ -23,8 +24,8 @@ const uint64_t DIFFICULTY_TARGET                             = 30; // seconds
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 999730; // Wrkz
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 40;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 75; // D
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 10;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3         = 3 * DIFFICULTY_TARGET;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V4         = 6 * DIFFICULTY_TARGET;
@@ -33,7 +34,7 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(50000000000000);
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(100000000000000);
 const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 20160;
 const size_t   ZAWY_DIFFICULTY_V2                            = 0;
 const uint8_t  ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION      = 3;
@@ -44,7 +45,7 @@ const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 128800;
 
 const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 600000;
 
-const unsigned EMISSION_SPEED_FACTOR                         = 22;
+const unsigned EMISSION_SPEED_FACTOR                         = 27;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
@@ -52,7 +53,7 @@ const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(MONEY_SU
 const char     GENESIS_COINBASE_TX_HEX[]                     = "012801ff00038090cad2c60e02484ab563a5ec4cb8aa159b878e4ca0a417e7258ec4fd338128059f2b7193dcaa8090cad2c60e02655ed6ab140ef3ca45d8d913125b8bc8917c590af4d1b9d7b4a67396e4a764088090cad2c60e020e06bf1587f9768cfd735a95e8254e98c68604f690e699f8403058422ede04282101c47eee4cfef6f30b5368d0251ad66a5800e2f0b2b70a4a3034c7bba3c5d0d6e0";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
-   You can get this value by doing "print_block 2" in Wrkzd. It is used to know what timestamp
+   You can get this value by doing "print_block 2" in Dynged. It is used to know what timestamp
    to import from when the block height cannot be found in the node or the node is offline. */
 const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1529831318;
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
@@ -64,7 +65,7 @@ const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 
 const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 2;
 
-const uint64_t MINIMUM_FEE                                   = UINT64_C(5);
+const uint64_t MINIMUM_FEE                                   = UINT64_C(1);
 
 /* This section defines our minimum and maximum mixin counts required for transactions */
 const uint64_t MINIMUM_MIXIN_V1                              = 0;
@@ -80,20 +81,20 @@ const uint64_t MINIMUM_MIXIN_V4                              = 1;
 const uint64_t MAXIMUM_MIXIN_V4                              = 3;
 
 /* The heights to activate the mixin limits at */
-const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 10000;
+const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 100000;
 const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 302400;
 const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 430000;
 const uint32_t MIXIN_LIMITS_V4_HEIGHT                        = 700000;
 
-/* The mixin to use by default with zedwallet and wrkz-service */
+/* The mixin to use by default with zedwallet and dynge-service */
 /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
-const uint64_t DEFAULT_MIXIN_V0                              = 3;
+const uint64_t DEFAULT_MIXIN_V0                              = 0;
 const uint64_t DEFAULT_MIXIN_V1                              = MINIMUM_MIXIN_V2;
 const uint64_t DEFAULT_MIXIN_V2                              = MINIMUM_MIXIN_V2;
 const uint64_t DEFAULT_MIXIN_V3                              = MINIMUM_MIXIN_V2;
 const uint64_t DEFAULT_MIXIN_V4                              = MAXIMUM_MIXIN_V4;
 
-const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(10);
+const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(1);
 const uint64_t DEFAULT_DUST_THRESHOLD_V2                     = UINT64_C(0);
 
 const uint32_t DUST_THRESHOLD_V2_HEIGHT                      = MIXIN_LIMITS_V2_HEIGHT;
@@ -124,7 +125,7 @@ const uint64_t MAX_EXTRA_SIZE_V2_HEIGHT                      = 494800;
 
 /* For new projects forked from this code base, this value should be
    changed to 0 to prevent a possible transaction bloat exploit */
-const uint64_t TRANSACTION_SIGNATURE_COUNT_VALIDATION_HEIGHT = 1400000;
+const uint64_t TRANSACTION_SIGNATURE_COUNT_VALIDATION_HEIGHT = 0;
 
 const uint64_t CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS     = 1;
 const uint64_t CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_SECONDS    = DIFFICULTY_TARGET * CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS;
@@ -137,10 +138,10 @@ const size_t   FUSION_TX_MAX_SIZE                            = CRYPTONOTE_BLOCK_
 const size_t   FUSION_TX_MIN_INPUT_COUNT                     = 12;
 const size_t   FUSION_TX_MIN_IN_OUT_COUNT_RATIO              = 4;
 
-const uint32_t UPGRADE_HEIGHT_V2                             = 1;
-const uint32_t UPGRADE_HEIGHT_V3                             = 2;
-const uint32_t UPGRADE_HEIGHT_V4                             = 3; // Upgrade height for CN-Lite Variant 1 switch.
-const uint32_t UPGRADE_HEIGHT_V5                             = 302400; // Upgrade height for CN-Turtle Variant 2 switch.
+const uint32_t UPGRADE_HEIGHT_V2                             = 400000;
+const uint32_t UPGRADE_HEIGHT_V3                             = 500000;
+const uint32_t UPGRADE_HEIGHT_V4                             = 600000; // Upgrade height for CN-Lite Variant 1 switch.
+const uint32_t UPGRADE_HEIGHT_V5                             = 702400; // Upgrade height for CN-Turtle Variant 2 switch.
 const uint32_t UPGRADE_HEIGHT_CURRENT                        = UPGRADE_HEIGHT_V5;
 
 const unsigned UPGRADE_VOTING_THRESHOLD                      = 90;               // percent
@@ -152,11 +153,11 @@ static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 /* Block heights we are going to have hard forks at */
 const uint64_t FORK_HEIGHTS[] = {
     1,        // 0
-    40000,    // 1
-    100000,   // 2
-    302400,   // 3
-    430000,   // 4
-    494800,   // 5
+    300000,    // 1
+    400000,   // 2
+    500000,   // 3
+    630000,   // 4
+    702400,   // 5
     700000,   // 6
     1000000   // 7
 };
@@ -178,14 +179,14 @@ static_assert(CURRENT_FORK_INDEX >= 0, "CURRENT FORK INDEX must be >= 0");
 /* Make sure CURRENT_FORK_INDEX is a valid index, unless FORK_HEIGHTS is empty */
 static_assert(FORK_HEIGHTS_SIZE == 0 || CURRENT_FORK_INDEX < FORK_HEIGHTS_SIZE, "CURRENT_FORK_INDEX out of range of FORK_HEIGHTS!");
 
-const char     CRYPTONOTE_BLOCKS_FILENAME[]                  = "blocks.wrkz.bin";
-const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[]            = "blockindexes.wrkz.bin";
-const char     CRYPTONOTE_POOLDATA_FILENAME[]                = "poolstate.wrkz.bin";
-const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.wrkz.bin";
-const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.wrkz.json";
+const char     CRYPTONOTE_BLOCKS_FILENAME[]                  = "blocks.dynge.bin";
+const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[]            = "blockindexes.dynge.bin";
+const char     CRYPTONOTE_POOLDATA_FILENAME[]                = "poolstate.dynge.bin";
+const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.dynge.bin";
+const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.dynge.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "WRKZCoin";
+const char     CRYPTONOTE_NAME[]                             = "DyngeCoin";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -204,9 +205,9 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const uint64_t BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  17855;
-const int      RPC_DEFAULT_PORT                              =  17856;
-const int      SERVICE_DEFAULT_PORT                          =  7856;
+const int      P2P_DEFAULT_PORT                              =  7700;
+const int      RPC_DEFAULT_PORT                              =  7701;
+const int      SERVICE_DEFAULT_PORT                          =  7702;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
 const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  5000;
@@ -240,18 +241,16 @@ const uint64_t DATABASE_READ_BUFFER_MB_DEFAULT_SIZE          = 10;
 const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES               = 100;
 const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT     = 2;
 
-const char     LATEST_VERSION_URL[]                          = "https://latest.wrkz.work";
-const std::string LICENSE_URL                                = "https://github.com/wrkzcoin/wrkzcoin/blob/master/LICENSE";
+const char     LATEST_VERSION_URL[]                          = "https://dyngepeng.zapto.org";
+const std::string LICENSE_URL                                = "https://github.com/Tarmgas/dyngecoin/blob/master/LICENSE";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x57, 0x41, 0x65, 0xf9, 0x91, 0xa4, 0xb6, 0xc1, 0x43, 0xe9  } 
+    {  0x44, 0x79, 0x6e, 0x67, 0x65, 0x70, 0x65, 0x6e, 0x67, 0x32, 0x30, 0x31, 0x39, 0x72, 0x65, 0x78  } 
 };
 
 const char* const SEED_NODES[] = {
-       "139.99.46.111:17855",        // node-sg1.wrkz.work
-       "163.172.133.69:17855",       // node-pr1.wrkz.work
-       "51.15.131.220:17855",        // node-pr2.wrkz.work
-       "142.44.243.123:17855",       // node-us1.wrkz.work
-       "5.172.219.174:17855"         // wrkz.stx.nl sniperviperman
+       "dyngepeng.zapto.org:7700",        // dyngepeng.zapto.org
+       "dyngepeng.zapto.org:7770",       // dyngepeng.zapto.org
+       
 };
 } // CryptoNote

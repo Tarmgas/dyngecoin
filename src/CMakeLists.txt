@@ -161,16 +161,16 @@ add_dependencies(WalletService version)
 add_dependencies(zedwallet version)
 
 # Finally build the binaries
-set_property(TARGET Wrkzd PROPERTY OUTPUT_NAME "Wrkzd")
+set_property(TARGET Dynged PROPERTY OUTPUT_NAME "Dynged")
 set_property(TARGET zedwallet PROPERTY OUTPUT_NAME "zedwallet")
 set_property(TARGET zedwallet++ PROPERTY OUTPUT_NAME "zedwallet-beta")
-set_property(TARGET service PROPERTY OUTPUT_NAME "wrkz-service")
+set_property(TARGET service PROPERTY OUTPUT_NAME "dynge-service")
 set_property(TARGET miner PROPERTY OUTPUT_NAME "miner")
 set_property(TARGET cryptotest PROPERTY OUTPUT_NAME "cryptotest")
 set_property(TARGET WalletApi PROPERTY OUTPUT_NAME "wallet-api")
 
 # Additional make targets, can be used to build a subset of the targets
-# e.g. make pool will build only Wrkzd and service
-add_custom_target(pool DEPENDS Wrkzd service)
-add_custom_target(solominer DEPENDS Wrkzd zedwallet miner)
-add_custom_target(cli DEPENDS Wrkzd zedwallet)
+# e.g. make pool will build only Dynged and service
+add_custom_target(pool DEPENDS Dynged service)
+add_custom_target(solominer DEPENDS Dynged zedwallet miner)
+add_custom_target(cli DEPENDS Dynged zedwallet)
