@@ -22,8 +22,8 @@
 
 ##### Building
 
-- `git clone https://github.com/wrkzcoin/wrkzcoin`
-- `cd wrkzcoin`
+- `git clone https://github.com/Tarmgas/dyngecoin`
+- `cd dyngecoin`
 - `mkdir build && cd $_`
 - For Ubuntu:
 - `cmake ..`
@@ -56,8 +56,8 @@
 ##### Building
 - `export CC=clang-6.0`
 - `export CXX=clang++-6.0`
-- `git clone https://github.com/wrkzcoin/wrkzcoin`
-- `cd wrkzcoin`
+- `git clone https://github.com/Tarmgas/dyngecoin`
+- `cd dyngecoin`
 - `mkdir build && cd $_`
 - `cmake ..` or `cmake -DBOOST_ROOT=<path_to_boost_install> ..` when building
 - `make`
@@ -77,8 +77,8 @@
 - `brew install --force cmake boost llvm`
 - `export CC=/usr/local/opt/llvm/bin/clang`
 - `export CXX=/usr/local/opt/llvm/bin/clang++`
-- `git clone https://github.com/wrkzcoin/wrkzcoin`
-- `cd wrkzcoin`
+- `git clone https://github.com/Tarmgas/dyngecoin`
+- `cd dyngecoin`
 - `mkdir build && cd $_`
 - `cmake ..` or `cmake -DBOOST_ROOT=<path_to_boost_install> ..` when building
   from a specific boost install. If you used brew to install boost, your path is most likely `/usr/local/include/boost.`
@@ -90,8 +90,8 @@
 - `brew install --force cmake boost llvm gcc@8`
 - `export CC=gcc-8`
 - `export CXX=g++-8`
-- `git clone https://github.com/wrkzcoin/wrkzcoin`
-- `cd wrkzcoin`
+- `git clone https://github.com/Tarmgas/dyngecoin`
+- `cd dyngecoin`
 - `chmod +x ./external/rocksdb/build_tools/build_detect_platform`
 - `chmod +x ./external/rocksdb/build_tools/version.sh`
 - `mkdir build && cd $_`
@@ -101,7 +101,7 @@
 
 The binaries will be in `./src` after compilation is complete.
 
-Run `./src/Wrkzd` to connect to the network and let it sync (it may take a while).
+Run `./src/Dynged` to connect to the network and let it sync (it may take a while).
 
 #### Windows 10
 
@@ -113,17 +113,17 @@ Run `./src/Wrkzd` to connect to the network and let it sync (it may take a while
 ##### Building
 
 - From the start menu, open 'x64 Native Tools Command Prompt for vs2017'.
-- `cd <your_wrkzcoin_directory>`
+- `cd <your_dyngecoin_directory>`
 - `mkdir build`
 - `cd build`
 - Set the PATH variable for cmake: ie. `set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%`
 - `cmake -G "Visual Studio 14 Win64" .. -DBOOST_ROOT=C:/local/boost_1_59_0` (Or your boost installed dir.)
-- `MSBuild WrkzCoin.sln /p:Configuration=Release /m`
+- `MSBuild DyngeCoin.sln /p:Configuration=Release /m`
 - If all went well, it will complete successfully, and you will find all your binaries in the '..\build\src\Release' directory.
 - Additionally, a `.sln` file will have been created in the `build` directory. If you wish to open the project in Visual Studio with this, you can.
 
 #### Sync
-For faster sync, please use checkpoints: https://github.com/wrkzcoin/checkpoints
+For faster sync, please use checkpoints: https://github.com/dyngecoin/checkpoints
 
 #### Thanks
 Cryptonote Developers, Bytecoin Developers, Monero Developers, Forknote Project, TurtleCoin Project, DeroGold Association 
