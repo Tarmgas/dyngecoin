@@ -50,12 +50,12 @@ static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED
 
 /* Premine amount */
 const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(MONEY_SUPPLY * 3 / 100);
-const char     GENESIS_COINBASE_TX_HEX[]                     = "012801ff00038090cad2c60e02484ab563a5ec4cb8aa159b878e4ca0a417e7258ec4fd338128059f2b7193dcaa8090cad2c60e02655ed6ab140ef3ca45d8d913125b8bc8917c590af4d1b9d7b4a67396e4a764088090cad2c60e020e06bf1587f9768cfd735a95e8254e98c68604f690e699f8403058422ede04282101c47eee4cfef6f30b5368d0251ad66a5800e2f0b2b70a4a3034c7bba3c5d0d6e0";
+const char     GENESIS_COINBASE_TX_HEX[]                     =  "012801ff00038090cad2c60e02484ab563a5ec4cb8aa159b878e4ca0a417e7258ec4fd338128059f2b7193dcaa8090cad2c60e02655ed6ab140ef3ca45d8d913125b8bc8917c590af4d1b9d7b4a67396e4a764088090cad2c60e020e06bf1587f9768cfd735a95e8254e98c68604f690e699f8403058422ede04282101c47eee4cfef6f30b5368d0251ad66a5800e2f0b2b70a4a3034c7bba3c5d0d6e0";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
    You can get this value by doing "print_block 2" in Dynged. It is used to know what timestamp
    to import from when the block height cannot be found in the node or the node is offline. */
-const uint64_t GENESIS_BLOCK_TIMESTAMP                       = ;
+const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1529831318;
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 20000;
