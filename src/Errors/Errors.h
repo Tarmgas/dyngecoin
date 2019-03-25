@@ -186,12 +186,12 @@ enum ErrorCode
 
     /* Value given is negative, but must be >= 0
        NOTE: Not used in WalletBackend, only here to maintain API compatibility
-       with wrkzcoin-wallet-backend (typescript) */
+       with dyngecoin-wallet-backend (typescript) */
     NEGATIVE_VALUE_GIVEN = 46,
 
     /* Key is not 64 char hex 
        NOTE: Not used in WalletBackend, only here to maintain API compatibility
-       with wrkzcoin-wallet-backend (typescript) */
+       with dyngecoin-wallet-backend (typescript) */
     INVALID_KEY_FORMAT = 47,
 
     /* Hash not 64 chars */

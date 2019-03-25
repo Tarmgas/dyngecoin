@@ -28,7 +28,7 @@
 #include <errno.h>
 #endif
 
-#define SERVICE_NAME "wrkz-service"
+#define SERVICE_NAME "dynge-service"
 
 PaymentGateService* ppg;
 
