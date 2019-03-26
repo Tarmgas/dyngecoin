@@ -17,7 +17,7 @@ const std::string windowsAsciiArt =
 	"          |___/           |___/         \n"                              
 
 
-
+;
 const std::string nonWindowsAsciiArt = 
       "\n                                             \n"
 	"██████╗ ██╗   ██╗███╗   ██╗ ██████╗ ███████╗\n"
