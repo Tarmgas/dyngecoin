@@ -1,6 +1,6 @@
 // Copyright (c) 2018, The TurtleCoin Developers
 // Copyright (c) 2018, The WrkzCoin developers
-// Copyright (c) 2018, The DyngeCoin developers
+// Copyright (c) 2019, The DyngeCoin developers
 //
 // Please see the included LICENSE file for more information
 

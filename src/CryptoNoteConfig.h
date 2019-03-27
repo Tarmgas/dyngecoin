@@ -3,7 +3,7 @@
 // Copyright (c) 2018-2019, The TurtleCoin Developers
 // Copyright (c) 2018-2019, The WrkzCoin developers
 // Copyright (c) 2018-2019, The Coin developers
-// Copyright (c) 2018-2019, The DyngeCoin developers
+// Copyright (c) 2019-2019, The DyngeCoin developers
 //
 // Please see the included LICENSE file for more information.
 
@@ -50,12 +50,12 @@ static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED
 
 /* Premine amount */
 const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(MONEY_SUPPLY * 3 / 100);
-const char     GENESIS_COINBASE_TX_HEX[]                     =  "012801ff00038090cad2c60e02484ab563a5ec4cb8aa159b878e4ca0a417e7258ec4fd338128059f2b7193dcaa8090cad2c60e02655ed6ab140ef3ca45d8d913125b8bc8917c590af4d1b9d7b4a67396e4a764088090cad2c60e020e06bf1587f9768cfd735a95e8254e98c68604f690e699f8403058422ede04282101c47eee4cfef6f30b5368d0251ad66a5800e2f0b2b70a4a3034c7bba3c5d0d6e0";
+const char     GENESIS_COINBASE_TX_HEX[]                     =  "010a01ff000180e0bcefa757022b8cdbe40d2979acb5abec5f01be91303c4691a8902323c7dc7abf309cdf23b22101e71c0c9cbc87573c108ef2138d7ea79fb163d74937c5fe4e86d0f4db99c5a6e5";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
    You can get this value by doing "print_block 2" in Dynged. It is used to know what timestamp
    to import from when the block height cannot be found in the node or the node is offline. */
-const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1529831318;
+const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 2114832619;
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 20000;
