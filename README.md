@@ -108,7 +108,7 @@ Run `./src/Dynged` to connect to the network and let it sync (it may take a whil
 ##### Prerequisites
 - Install [Visual Studio 2017 Community Edition](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&page=inlineinstall)
 - When installing Visual Studio, it is **required** that you install **Desktop development with C++** and the **VC++ v140 toolchain** when selecting features. The option to install the v140 toolchain can be found by expanding the "Desktop development with C++" node on the right. You will need this for the project to build correctly.
-- Install [Boost 1.59.0](https://sourceforge.net/projects/boost/files/boost-binaries/1.59.0/), ensuring you download the installer for MSVC 14.
+- Install [Boost 1.68.0](https://sourceforge.net/projects/boost/files/boost-binaries/1.68.0/), ensuring you download the installer for MSVC 14.1
 
 ##### Building
 
@@ -117,7 +117,7 @@ Run `./src/Dynged` to connect to the network and let it sync (it may take a whil
 - `mkdir build`
 - `cd build`
 - Set the PATH variable for cmake: ie. `set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%`
-- `cmake -G "Visual Studio 14 Win64" .. -DBOOST_ROOT=C:/local/boost_1_59_0` (Or your boost installed dir.)
+- `cmake -G "Visual Studio 15 Win64" .. -DBOOST_ROOT=C:/local/boost_1_68_0` (Or your boost installed dir.)
 - `MSBuild DyngeCoin.sln /p:Configuration=Release /m`
 - If all went well, it will complete successfully, and you will find all your binaries in the '..\build\src\Release' directory.
 - Additionally, a `.sln` file will have been created in the `build` directory. If you wish to open the project in Visual Studio with this, you can.
