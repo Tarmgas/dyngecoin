@@ -138,10 +138,10 @@ const size_t   FUSION_TX_MAX_SIZE                            = CRYPTONOTE_BLOCK_
 const size_t   FUSION_TX_MIN_INPUT_COUNT                     = 12;
 const size_t   FUSION_TX_MIN_IN_OUT_COUNT_RATIO              = 4;
 
-const uint32_t UPGRADE_HEIGHT_V2                             = 400000;
-const uint32_t UPGRADE_HEIGHT_V3                             = 500000;
-const uint32_t UPGRADE_HEIGHT_V4                             = 600000; // Upgrade height for CN-Lite Variant 1 switch.
-const uint32_t UPGRADE_HEIGHT_V5                             = 702400; // Upgrade height for CN-Turtle Variant 2 switch.
+const uint32_t UPGRADE_HEIGHT_V2                             = 4000000;
+const uint32_t UPGRADE_HEIGHT_V3                             = 5000000;
+const uint32_t UPGRADE_HEIGHT_V4                             = 6000000; // Upgrade height for CN-Lite Variant 1 switch.
+const uint32_t UPGRADE_HEIGHT_V5                             = 7024000; // Upgrade height for CN-Turtle Variant 2 switch.
 const uint32_t UPGRADE_HEIGHT_CURRENT                        = UPGRADE_HEIGHT_V5;
 
 const unsigned UPGRADE_VOTING_THRESHOLD                      = 90;               // percent
@@ -153,13 +153,13 @@ static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 /* Block heights we are going to have hard forks at */
 const uint64_t FORK_HEIGHTS[] = {
     1,        // 0
-    300000,    // 1
-    400000,   // 2
-    500000,   // 3
-    630000,   // 4
-    702400,   // 5
-    700000,   // 6
-    1000000   // 7
+    3000000,    // 1
+    4000000,   // 2
+    5000000,   // 3
+    6300000,   // 4
+    7024000,   // 5
+    7000000,   // 6
+    10000000   // 7
 };
 
 /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
@@ -251,6 +251,9 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 const char* const SEED_NODES[] = {
        "dyngepeng.zapto.org:7770",        // dyngepeng.zapto.org
        "dyngepeng.zapto.org:7778",       // dyngepeng.zapto.org
+       "poolice.sytes.net:7770",       // http://poolice.sytes.net/
+       "firsty.ddns.net:7770",       // http://firsty.ddns.net:7767/
+
        
 };
 } // CryptoNote
