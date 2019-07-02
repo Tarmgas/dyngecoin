@@ -126,4 +126,4 @@ Run `./src/Dynged` to connect to the network and let it sync (it may take a whil
 For faster sync, please use checkpoints: https://github.com/dyngecoin/checkpoints
 
 #### Thanks
-Cryptonote Developers, Bytecoin Developers, Monero Developers, Forknote Project, TurtleCoin Project, DeroGold Association 
+Cryptonote Developers, Bytecoin Developers, Monero Developers, Forknote Project, TurtleCoin Project, DeroGold Association, WRKZ Creators

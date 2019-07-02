@@ -8,7 +8,7 @@ BUILD_DIRECTORY=$2
 function usage()
 {
     echo "This script builds the dynamically and statically linked version"
-    echo "and generates the checksum files of the WkrzCoin tag provided."
+    echo "and generates the checksum files of the DyngeCoin tag provided."
     echo
     echo "USAGE: $0 <tag> <build-directory>"
     echo
