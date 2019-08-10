@@ -123,7 +123,7 @@ Run `./src/Dynged` to connect to the network and let it sync (it may take a whil
 - Additionally, a `.sln` file will have been created in the `build` directory. If you wish to open the project in Visual Studio with this, you can.
 
 #### Sync
-For faster sync, please use checkpoints: https://github.com/dyngecoin/checkpoints
+For faster sync, please use checkpoints: https://github.com/Tarmgas/checkpoints
 
 #### Thanks
 Cryptonote Developers, Bytecoin Developers, Monero Developers, Forknote Project, TurtleCoin Project, DeroGold Association, WRKZ Creators
