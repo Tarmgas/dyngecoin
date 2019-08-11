@@ -113,6 +113,7 @@ Run `./src/Dynged` to connect to the network and let it sync (it may take a whil
 ##### Building
 
 - From the start menu, open 'x64 Native Tools Command Prompt for vs2017'.
+- `git clone https://github.com/Tarmgas/dyngecoin`
 - `cd <your_dyngecoin_directory>`
 - `mkdir build`
 - `cd build`
