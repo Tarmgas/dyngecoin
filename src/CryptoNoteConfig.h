@@ -2,7 +2,6 @@
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018-2019, The TurtleCoin Developers
 // Copyright (c) 2018-2019, The WrkzCoin developers
-// Copyright (c) 2018-2019, The Coin developers
 // Copyright (c) 2019-2019, The DyngeCoin developers
 //
 // Please see the included LICENSE file for more information.
@@ -58,7 +57,7 @@ static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) !
 const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1553975015;
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
-const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 20000;
+const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 100000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
@@ -68,27 +67,27 @@ const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 2;
 const uint64_t MINIMUM_FEE                                   = UINT64_C(1);
 
 /* This section defines our minimum and maximum mixin counts required for transactions */
-const uint64_t MINIMUM_MIXIN_V1                              = 0;
+const uint64_t MINIMUM_MIXIN_V1                              = 3;
 const uint64_t MAXIMUM_MIXIN_V1                              = 30;
 
 const uint64_t MINIMUM_MIXIN_V2                              = 3;
-const uint64_t MAXIMUM_MIXIN_V2                              = 7;
+const uint64_t MAXIMUM_MIXIN_V2                              = 30;
 
-const uint64_t MINIMUM_MIXIN_V3                              = 0;
-const uint64_t MAXIMUM_MIXIN_V3                              = 7;
+const uint64_t MINIMUM_MIXIN_V3                              = 3;
+const uint64_t MAXIMUM_MIXIN_V3                              = 30;
 
-const uint64_t MINIMUM_MIXIN_V4                              = 1;
-const uint64_t MAXIMUM_MIXIN_V4                              = 3;
+const uint64_t MINIMUM_MIXIN_V4                              = 3;
+const uint64_t MAXIMUM_MIXIN_V4                              = 30;
 
 /* The heights to activate the mixin limits at */
 const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 100000;
 const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 302400;
-const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 430000;
-const uint32_t MIXIN_LIMITS_V4_HEIGHT                        = 700000;
+const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 4000000;
+const uint32_t MIXIN_LIMITS_V4_HEIGHT                        = 7000000;
 
 /* The mixin to use by default with zedwallet and dynge-service */
 /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
-const uint64_t DEFAULT_MIXIN_V0                              = 0;
+const uint64_t DEFAULT_MIXIN_V0                              = 3;
 const uint64_t DEFAULT_MIXIN_V1                              = MINIMUM_MIXIN_V2;
 const uint64_t DEFAULT_MIXIN_V2                              = MINIMUM_MIXIN_V2;
 const uint64_t DEFAULT_MIXIN_V3                              = MINIMUM_MIXIN_V2;
@@ -241,7 +240,7 @@ const uint64_t DATABASE_READ_BUFFER_MB_DEFAULT_SIZE          = 10;
 const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES               = 100;
 const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT     = 2;
 
-const char     LATEST_VERSION_URL[]                          = "https://dyngepeng.zapto.org";
+const char     LATEST_VERSION_URL[]                          = "https://dyngecoin.com";
 const std::string LICENSE_URL                                = "https://github.com/Tarmgas/dyngecoin/blob/master/LICENSE";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {

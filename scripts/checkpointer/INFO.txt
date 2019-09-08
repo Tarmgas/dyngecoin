@@ -1,0 +1,25 @@
+windows:
+install python, pip (via script), requests (via pip-kommando)
+
+
+commando:
+python full-checkpoints.py checkpoints.csv
+
+daemon kjøres som blockexplorer
+
+==
+Lunix
+--
+$ python full-checkpoints.py
+Traceback (most recent call last):
+  File "full-checkpoints.py", line 6, in <module>
+    import requests
+ImportError: No module named requests
+--
+sudo apt install python-pip
+--
+pip install requests
+--
+python full-checkpoints.py checkpoints.csv
+--
+takalongtaim
