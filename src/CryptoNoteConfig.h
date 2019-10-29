@@ -58,7 +58,7 @@ const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1553975015;
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 100000;
-const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
+const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 30000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 
@@ -70,13 +70,13 @@ const uint64_t MINIMUM_FEE                                   = UINT64_C(1);
 const uint64_t MINIMUM_MIXIN_V1                              = 0;
 const uint64_t MAXIMUM_MIXIN_V1                              = 30;
 
-const uint64_t MINIMUM_MIXIN_V2                              = 3;
+const uint64_t MINIMUM_MIXIN_V2                              = 0;
 const uint64_t MAXIMUM_MIXIN_V2                              = 30;
 
-const uint64_t MINIMUM_MIXIN_V3                              = 3;
+const uint64_t MINIMUM_MIXIN_V3                              = 0;
 const uint64_t MAXIMUM_MIXIN_V3                              = 30;
 
-const uint64_t MINIMUM_MIXIN_V4                              = 3;
+const uint64_t MINIMUM_MIXIN_V4                              = 0;
 const uint64_t MAXIMUM_MIXIN_V4                              = 30;
 
 /* The heights to activate the mixin limits at */
@@ -87,7 +87,7 @@ const uint32_t MIXIN_LIMITS_V4_HEIGHT                        = 7000000;
 
 /* The mixin to use by default with zedwallet and dynge-service */
 /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
-const uint64_t DEFAULT_MIXIN_V0                              = 3;
+const uint64_t DEFAULT_MIXIN_V0                              = 0;
 const uint64_t DEFAULT_MIXIN_V1                              = MINIMUM_MIXIN_V2;
 const uint64_t DEFAULT_MIXIN_V2                              = MINIMUM_MIXIN_V2;
 const uint64_t DEFAULT_MIXIN_V3                              = MINIMUM_MIXIN_V2;
@@ -204,9 +204,9 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const uint64_t BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  7770;
-const int      RPC_DEFAULT_PORT                              =  7771;
-const int      SERVICE_DEFAULT_PORT                          =  7772;
+const int      P2P_DEFAULT_PORT                              =  7780;
+const int      RPC_DEFAULT_PORT                              =  7781;
+const int      SERVICE_DEFAULT_PORT                          =  7782;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
 const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  5000;
@@ -244,14 +244,12 @@ const char     LATEST_VERSION_URL[]                          = "https://dyngecoi
 const std::string LICENSE_URL                                = "https://github.com/Tarmgas/dyngecoin/blob/master/LICENSE";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0x44, 0x79, 0x6e, 0x67, 0x65, 0x70, 0x65, 0x6e, 0x67, 0x32, 0x30, 0x31, 0x39, 0x72, 0x65, 0x78  } 
+    {  0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x44, 0x39, 0x72, 0x65, 0x78  } 
 };
 
 const char* const SEED_NODES[] = {
-       "dyngepeng.zapto.org:7770",        // dyngepeng.zapto.org
-       "dyngepeng.zapto.org:7778",       // dyngepeng.zapto.org
-       "poolice.sytes.net:7770",       // http://poolice.sytes.net/
-       "firsty.ddns.net:7770",       // http://firsty.ddns.net:7767/
+       "127.0.0.1:7780",        // localhost
+
 
        
 };
