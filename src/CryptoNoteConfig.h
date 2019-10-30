@@ -49,7 +49,7 @@ static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED
 
 /* Premine amount */
 const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(MONEY_SUPPLY * 3 / 100);
-const char     GENESIS_COINBASE_TX_HEX[]                     =  "010a01ff000180e0bcefa75702ef76226901a5d52faafed803ad32b1467e2d9e4dd2af2913100b98d957a8b78a2101584a3ecabde6ed17c81078aeb98510e78b1e2935594a1d4a46fd7b4600548723";
+const char     GENESIS_COINBASE_TX_HEX[]                     =  "010a01ff000180e0bcefa75702d55032889ef6d6b9151fd293d3333b8076e3e06795dd9c9a5a8a34c8cce4c1ba2101f27412ce7ee027414c39c4ec9befd1e4a55f60d93c3e7c61305390d9eb02a62d";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
    You can get this value by doing "print_block 2" in Dynged. It is used to know what timestamp
