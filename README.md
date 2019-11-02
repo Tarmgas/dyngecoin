@@ -26,7 +26,8 @@
 - `cd dyngecoin`
 - `mkdir build && cd $_`
 - For Ubuntu:
-- `cmake ..`
+- `cmake ..`             for release build: `cmake -DCMAKE_BUILD_TYPE=Release ..`
+
 - `make`                 for faster build: - `make -j4`
 - For CentOS 6/7, use devtoolset-7:
 - `scl enable devtoolset-7 bash`
