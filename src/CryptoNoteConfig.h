@@ -58,7 +58,7 @@ const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1553975015;
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 100000;
-const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 30000;
+const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 
@@ -71,13 +71,13 @@ const uint64_t MINIMUM_MIXIN_V1                              = 0;
 const uint64_t MAXIMUM_MIXIN_V1                              = 30;
 
 const uint64_t MINIMUM_MIXIN_V2                              = 0;
-const uint64_t MAXIMUM_MIXIN_V2                              = 30;
+const uint64_t MAXIMUM_MIXIN_V2                              = 3;
 
 const uint64_t MINIMUM_MIXIN_V3                              = 0;
-const uint64_t MAXIMUM_MIXIN_V3                              = 30;
+const uint64_t MAXIMUM_MIXIN_V3                              = 3;
 
 const uint64_t MINIMUM_MIXIN_V4                              = 0;
-const uint64_t MAXIMUM_MIXIN_V4                              = 30;
+const uint64_t MAXIMUM_MIXIN_V4                              = 3;
 
 /* The heights to activate the mixin limits at */
 const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 100000;
