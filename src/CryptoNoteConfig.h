@@ -137,7 +137,7 @@ const size_t   FUSION_TX_MAX_SIZE                            = CRYPTONOTE_BLOCK_
 const size_t   FUSION_TX_MIN_INPUT_COUNT                     = 12;
 const size_t   FUSION_TX_MIN_IN_OUT_COUNT_RATIO              = 4;
 
-const uint32_t UPGRADE_HEIGHT_V2                             = 4000000;
+const uint32_t UPGRADE_HEIGHT_V2                             = 565543;
 const uint32_t UPGRADE_HEIGHT_V3                             = 5000000;
 const uint32_t UPGRADE_HEIGHT_V4                             = 6000000; // Upgrade height for CN-Lite Variant 1 switch.
 const uint32_t UPGRADE_HEIGHT_V5                             = 7024000; // Upgrade height for CN-Turtle Variant 2 switch.
