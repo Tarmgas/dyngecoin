@@ -248,9 +248,9 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 };
 
 const char* const SEED_NODES[] = {
+        "136.244.110.186:7770",        // dyngecoin remote node
        "dyngepeng.zapto.org:7770",        // dyngepeng.zapto.org
        "dyngepeng.zapto.org:7778",       // dyngepeng.zapto.org
-       "poolice.sytes.net:7770",       // http://poolice.sytes.net/
        "firsty.ddns.net:7770",       // http://firsty.ddns.net:7767/
 
        
