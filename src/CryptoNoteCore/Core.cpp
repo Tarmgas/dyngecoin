@@ -2097,9 +2097,13 @@ void Core::importBlocksFromStorage() {
     CachedBlock cachedBlock(blockTemplate);
 
     if (blockTemplate.previousBlockHash != previousBlockHash) {
-      logger(Logging::ERROR) << "Corrupted blockchain. Block with index " << i << " and hash " << cachedBlock.getBlockHash()
+      logger(Logging::ERROR) << "Local blockchain corruption detected. " << std::endl
                              << " has previous block hash " << blockTemplate.previousBlockHash << ", but parent has hash " << previousBlockHash
+                             << "Block with index " << i << " and hash " << cachedBlock.getBlockHash()
                              << ". Resynchronize your daemon please.";
+                             << " has previous block hash " << blockTemplate.previousBlockHash << ", but parent has hash " << previousBlockHash << "." << std::endl
+                             << "Please try to repair this issue by starting the node with the option: --rewind " << i << std::endl
+                             << "If the above does not repair the issue, please launch the node with the option: --resync" << std::endl;
       throw std::system_error(make_error_code(error::CoreErrorCode::CORRUPTED_BLOCKCHAIN));
     }
 

@@ -33,6 +33,8 @@ namespace DaemonConfig{
       ("help", "Display this help message", cxxopts::value<bool>()->implicit_value("true"))
       ("os-version", "Output Operating System version information", cxxopts::value<bool>()->default_value("false")->implicit_value("true"))
       ("version","Output daemon version information",cxxopts::value<bool>()->default_value("false")->implicit_value("true"));
+	  ("rewind", "Rewinds the local blockchain cache to the specified height. 0 = Normal Operation",
+        cxxopts::value<uint32_t>()->default_value(std::to_string(config.rewindToHeight)), "#")
 
     options.add_options("Genesis Block")
       ("genesis-block-reward-address", "Specify the address for any premine genesis block rewards", cxxopts::value<std::vector<std::string>>(), "<address>")
@@ -109,6 +111,11 @@ namespace DaemonConfig{
       if (cli.count("os-version") > 0)
       {
         config.osVersion = cli["os-version"].as<bool>();
+      }
+	  
+	        if (cli.count("rewind") > 0)
+      {
+        config.rewindToHeight = cli["rewind"].as<uint32_t>();
       }
 
       if (cli.count("print-genesis-tx") > 0)
