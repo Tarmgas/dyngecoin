@@ -230,15 +230,6 @@ int main(int argc, char* argv[])
       logger(INFO) << "Rewinding blockchain to: " << config.rewindToHeight << std::endl;
       std::unique_ptr<IMainChainStorage> mainChainStorage;
 
-      if (config.useSqliteForLocalCaches)
-      {
-        mainChainStorage = createSwappedMainChainStorageSqlite(config.dataDirectory, currency);
-      }
-      else
-      {
-        mainChainStorage = createSwappedMainChainStorage(config.dataDirectory, currency);
-      }
-
       while(mainChainStorage->getBlockCount() >= config.rewindToHeight)
       {
         mainChainStorage->popBlock();
