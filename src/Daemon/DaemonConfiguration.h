@@ -42,7 +42,8 @@ namespace DaemonConfig {
       version = false;
       osVersion = false;
       printGenesisTx = false;
-      dumpConfig = false; 
+      dumpConfig = false;
+	  resync = false; 
     }
 
     std::string dataDirectory;
@@ -74,6 +75,7 @@ namespace DaemonConfig {
     bool enableBlockExplorer;
     bool localIp;
     bool hideMyPort;
+	bool resync;
 
     std::string configFile;
     std::string outputFile;
