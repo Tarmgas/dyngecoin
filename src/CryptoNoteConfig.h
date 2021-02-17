@@ -2,7 +2,7 @@
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018-2019, The TurtleCoin Developers
 // Copyright (c) 2018-2019, The WrkzCoin developers
-// Copyright (c) 2019-2019, The DyngeCoin developers
+// Copyright (c) 2019-2021, The DyngeCoin developers
 //
 // Please see the included LICENSE file for more information.
 
@@ -248,10 +248,8 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 };
 
 const char* const SEED_NODES[] = {
-        "136.244.110.186:7770",        // dyngecoin remote node
-       "dyngepeng.zapto.org:7770",        // dyngepeng.zapto.org
-       "dyngepeng.zapto.org:7778",       // dyngepeng.zapto.org
-       "firsty.ddns.net:7770",       // http://firsty.ddns.net:7767/
+        "136.244.110.186:7770",        // dyngecoin remote node 1
+       "74.208.203.212:7770",        // remote node 2
 
        
 };
